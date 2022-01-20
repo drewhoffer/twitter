@@ -2,11 +2,7 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= render 'layouts/rails_default' %>
     <%= javascript_importmap_tags %>
     <%= render 'layouts/shim' %>
   </head>

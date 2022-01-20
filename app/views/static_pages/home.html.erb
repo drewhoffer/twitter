@@ -1,7 +1,7 @@
 <div class="p-5 mb-4 bg-light rounded-3 center">
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold">Welcome to the Twitter Clone</h1>
-    <p class="">
+    <p>
       This is the home page for the
       <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> Twitter Clone.
     </p>
@@ -10,5 +10,13 @@
     </div>
   </div>
 </div>
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
+<div class="container d-flex flex-wrap align-items-center">
+  <%= link_to image_tag("rails.svg", alt: "Rails logo", class:"mx-4",width: "100"),
                       "https://rubyonrails.org/" %>
+  <%= link_to image_tag("ruby-on-rails.png", alt: "Ruby logo", class:"mx-4",width: "50"),
+                      "https://www.ruby-lang.org/en/" %>
+  <%= link_to image_tag("heroku.png", alt: "Heroku logo", class:"mx-4",width: "75"),
+                      "https://www.heroku.com/home" %>
+  <%= link_to image_tag("bootstrap.svg", alt: "Bootstrap logo", class:"mx-4",width: "50"),
+                      "https://getbootstrap.com/" %>
+</div>
