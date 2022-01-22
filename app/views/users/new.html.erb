@@ -1,5 +1,26 @@
 <% provide(:title, 'Sign up') %>
-<div class="container center">
-    <h1>Sign up</h1>
-    <p>This will be a signup page for new users.</p>
+<div class="container-sm">
+  <h1>Sign up</h1>
+  <%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'shared/error_messages' %>
+    <div class="mb-3 ">
+      <%= f.label :name, "Name", class: "form-label" %>
+      <%= f.text_field :name, class: "form-control" %>
+      <div id="nameHelp" class="form-text">This will be your display name.</div>
+    </div>
+    <div class="mb-3 ">
+      <%= f.label :email, "Email Address", class: "form-label" %>
+      <%= f.email_field :email, class: "form-control" %>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3 ">
+      <%= f.label :password, "Password", class: "form-label" %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div class="mb-3 ">
+      <%= f.label :password_confirmation, "Password Confirmation", class: "form-label" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+    <%= f.submit "Create my account", class: "btn btn-primary" %>
+  <% end %>
 </div>
