@@ -1,1 +1,5 @@
-# empty due to uniqueness constraint
+
+test_user:
+  name: Test User
+  email: test@example.com
+  password_digest: <%= User.digest('password') %>
