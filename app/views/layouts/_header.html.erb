@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
   <div class="container-fluid">
     <%= link_to "Twitter Clone", root_path, id: "logo" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
                 <li><%= link_to "Settings", "#", class: "dropdown-item" %></li>
                 <li><hr class="dropdown-divider dropdown-divider-dark"></li>
                 <li>
-                  <%= link_to "Log Out", logout_path,data: { "turbo-method": :delete }, class:"dropdown-item" %>
+                  <%= button_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
                 </li>
               </ul>
             </li>
